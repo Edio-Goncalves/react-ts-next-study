@@ -5,7 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Header() {
   return (
     <header>
-      <div className="header wrapper">
+      <div className="header">
         <nav>
           <ul>
             <li>

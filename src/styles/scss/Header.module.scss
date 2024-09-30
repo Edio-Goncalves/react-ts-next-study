@@ -3,6 +3,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 20px 10px;
+  width: 100%;
   .header {
     display: flex;
     align-items: center;
@@ -17,11 +18,13 @@ header {
           list-style: none;
           a {
             padding: 5px 10px;
+            transition: all 0.2s ease-in;
+            text-decoration: none;
             > :first-child {
               margin-right: 8px;
             }
             &:hover {
-              color: #d9d9d9;
+              color: #cecece;
             }
           }
         }

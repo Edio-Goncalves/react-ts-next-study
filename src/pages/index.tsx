@@ -1,12 +1,20 @@
+import AddTasks from "./components/AddTasks";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SearchTasks from "./components/SearchTasks";
+import Tasks from "./components/Tasks";
 
 export default function Home() {
   return (
-    <div>
+    <div className="wrapper">
       <Header />
 
-      <h1>Lista de Tarefas</h1>
+      <main className="home">
+        <h1>Lista de Tarefas</h1>
+        <AddTasks />
+        <SearchTasks />
+        <Tasks />
+      </main>
 
       <Footer />
     </div>
