@@ -3,6 +3,7 @@
 @import "./Footer.module.css";
 @import "./Home.module.css";
 @import "./Tasks.module.css";
+@import "./AddTasks.module.css";
 
 html,
 body {
