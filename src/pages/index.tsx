@@ -25,13 +25,23 @@ export default function Home() {
     setTask(newTasks);
   }
 
+  function setNewTask(title: string, description: string) {
+    const newTask: any = {
+      id: task.length + 1,
+      task: title,
+      description: description,
+      isComplete: false,
+    };
+    setTask([...task, newTask]);
+  }
+
   return (
     <div className="wrapper">
       <Header />
 
       <main className="home">
         <h1>Lista de Tarefas</h1>
-        <AddTasks />
+        <AddTasks setNewTask={setNewTask} />
         <SearchTasks />
         <Tasks
           task={task}
