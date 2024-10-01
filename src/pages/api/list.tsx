@@ -30,3 +30,5 @@ const list = [
     isComplete: false,
   },
 ];
+
+export default list;

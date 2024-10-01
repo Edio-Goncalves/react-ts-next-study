@@ -2,6 +2,7 @@
 @import "./Header.module.css";
 @import "./Footer.module.css";
 @import "./Home.module.css";
+@import "./Tasks.module.css";
 
 html,
 body {
