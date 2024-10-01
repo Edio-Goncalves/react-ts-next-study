@@ -60,12 +60,16 @@
         border-radius: 5px;
         background-color: rgb(255, 255, 255);
         border: none;
-        display: flex;
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: normal;
 
         &:first-child {
           width: 100%;
           max-width: 400px;
           text-align: left;
+
+          overflow: hidden;
         }
         &.small {
           display: flex;

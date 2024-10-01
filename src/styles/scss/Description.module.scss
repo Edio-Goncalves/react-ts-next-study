@@ -25,21 +25,29 @@
     }
 
     h1 {
+      padding: 0px 35px;
       width: 100%;
+      max-width: 450px;
       text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
   }
+
   .description-page {
-    width: 100%;
-    max-width: 450px;
+    min-width: 300px;
     padding: 20px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     background-color: rgb(226, 226, 226);
 
     p {
+      width: 100%;
+      max-width: 450px;
       font-size: 14px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
   }
 }
