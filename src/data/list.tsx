@@ -2,19 +2,22 @@ const list = [
   {
     id: 1,
     task: "Estudar React",
-    description: "Estudar React para criar aplicações interativas",
+    description:
+      "Estudar React para criar aplicações interativas, Estudar React para criar aplicações interativas",
     isComplete: false,
   },
   {
     id: 2,
     task: "Revisar JavaScript",
-    description: "Revisar conceitos avançados de JavaScript",
+    description:
+      "Revisar conceitos avançados de JavaScript, Estudar React para criar aplicações interativas",
     isComplete: false,
   },
   {
     id: 3,
     task: "Praticar CSS",
-    description: "Focar em layout responsivo e flexbox/grid",
+    description:
+      "Focar em layout responsivo e flexbox/grid, Estudar React para criar aplicações interativas",
     isComplete: false,
   },
   {

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function AddTasks(props: any) {
   const [title, setTitle] = useState("");
-  const [description, setDescriptio] = useState("");
+  const [description, setDescription] = useState("");
 
   return (
     <div className="addTasks-wrapper">
@@ -10,23 +10,23 @@ export default function AddTasks(props: any) {
         type="text"
         placeholder="Digite a tarefa"
         value={title}
-        onChange={(evt) => setTitle(evt.target.value)}
+        onChange={(vl) => setTitle(vl.target.value)}
       />
       <input
         type="text"
         placeholder="Digite a descroção da tarefa"
         value={description}
-        onChange={(evt) => setDescriptio(evt.target.value)}
+        onChange={(vl) => setDescription(vl.target.value)}
       />
       <button
         onClick={() => {
           if (!title.trim() || !description.trim()) {
-            return alert("Preencha o título e a descrição da tarefa.");
+            alert("Preencha os campos de tarefa e descrição.");
+            return;
           }
-
-          props.setNewTask(title, description);
+          props.setTaskValues(title, description);
           setTitle("");
-          setDescriptio("");
+          setDescription("");
         }}
       >
         Adicionar

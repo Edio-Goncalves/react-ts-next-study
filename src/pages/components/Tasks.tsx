@@ -1,8 +1,20 @@
+import { useRouter } from "next/router";
 import { faAngleRight, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Tasks(props: any) {
-  console.log(props.task);
+  const router = useRouter();
+
+  const handleRedirect = (task: any) => {
+    router.push({
+      pathname: "/description",
+      query: {
+        title: task.task,
+        description: task.description,
+      },
+    });
+  };
+
   return (
     <div className="task-wrapper">
       <ul>
@@ -15,7 +27,7 @@ export default function Tasks(props: any) {
               {task.task}
             </button>
 
-            <button className="small">
+            <button className="small" onClick={() => handleRedirect(task)}>
               <FontAwesomeIcon icon={faAngleRight} />
             </button>
 

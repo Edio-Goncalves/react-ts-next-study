@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import SearchTasks from "./components/SearchTasks";
 import Tasks from "./components/Tasks";
-import list from "./api/list";
+import list from "../data/list";
 
 export default function Home() {
   const [task, setTask] = useState(list);
@@ -25,13 +25,14 @@ export default function Home() {
     setTask(newTasks);
   }
 
-  function setNewTask(title: string, description: string) {
-    const newTask: any = {
+  function setTaskValues(title: string, description: string) {
+    const newTask = {
       id: task.length + 1,
       task: title,
-      description: description,
+      description,
       isComplete: false,
     };
+
     setTask([...task, newTask]);
   }
 
@@ -41,7 +42,7 @@ export default function Home() {
 
       <main className="home">
         <h1>Lista de Tarefas</h1>
-        <AddTasks setNewTask={setNewTask} />
+        <AddTasks setTaskValues={setTaskValues} />
         <SearchTasks />
         <Tasks
           task={task}
